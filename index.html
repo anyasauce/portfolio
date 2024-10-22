@@ -107,7 +107,7 @@
 
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    <section id="stats" class="stats section" data-aos="fade-up" data-aos-delay="200">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -226,7 +226,7 @@
     <div class="container">
       <div class="row gy-4">
   
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" id="frontend">
           <div class="service-item item-cyan position-relative">
             <i class="fab fa-html5 icon"></i>
             <h3>Front End Development</h3>
@@ -234,7 +234,7 @@
           </div>
         </div><!-- End Service Item -->
   
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" id="backend">
           <div class="service-item item-orange position-relative">
             <i class="fab fa-php icon"></i>
             <h3>Back End Development</h3>
@@ -242,7 +242,7 @@
           </div>
         </div><!-- End Service Item -->
   
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300" id="database">
           <div class="service-item item-teal position-relative">
             <i class="fas fa-database icon"></i>
             <h3>Database</h3>
@@ -250,7 +250,7 @@
           </div>
         </div><!-- End Service Item -->
   
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" id="programming">
           <div class="service-item item-red position-relative">
             <i class="fab fa-java icon"></i>
             <h3>Programming</h3>
@@ -258,7 +258,7 @@
           </div>
         </div><!-- End Service Item -->
   
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500" id="webdesign">
           <div class="service-item item-teal position-relative">
             <i class="fas fa-paint-brush icon"></i>
             <h3>Web Design</h3>
@@ -266,7 +266,7 @@
           </div>
         </div><!-- End Service Item -->
   
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600" id="capstone">
           <div class="service-item item-pink position-relative">
             <i class="fas fa-project-diagram icon"></i>
             <h3>Capstone System</h3>
@@ -660,9 +660,6 @@
 
 </section>
 
-
-
-  
   <!-- Include SweetAlert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
@@ -722,11 +719,13 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Back End Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Front End Development</a></li>
-
+            <li><i class="bi bi-chevron-right"></i> <a href="#webdesign">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#webdesign">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#backend">Back End Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#frontend">Front End Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#programming">Programming</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#database">Database</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#capstone">Capstone</a></li>
           </ul>
         </div>
 
