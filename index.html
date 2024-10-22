@@ -628,7 +628,7 @@
 
       <div class="col-lg-6">
         <h6>PHPMailer Not Working on GitHub, Direct Message Me on Facebook</h6>
-        <form action="send_mail.php" method="POST" class="mt-4" id="contactForm" data-aos="fade-up" data-aos-delay="200">
+        <form id="my-form" action="https://formspree.io/f/xovqvdoj" method="POST" class="mt-4" id="contactForm" data-aos="fade-up" data-aos-delay="200">
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
@@ -664,30 +664,55 @@
   <!-- Include SweetAlert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const messageType = document.getElementById('message-type').value;
+    var form = document.getElementById("my-form");
 
-      if (messageType === 'success') {
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent!',
-          text: 'Your message has been sent successfully.',
-          confirmButtonText: 'OK'
-        }).then(() => {
-          window.location.href = 'index.html';
-        });
-      } else if (messageType === 'error') {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong. Please try again later.',
-          confirmButtonText: 'OK'
-        }).then(() => {
-          window.location.href = 'index.html';
-        });
-      }
-    });
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var data = new FormData(event.target);
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Thanks for your submission!',
+            showConfirmButton: false,
+            timer: 1500
+          });
+          form.reset();
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'There was a problem submitting your form',
+          });
+        }
+      }).catch(error => {
+        // Check for connection issues
+        if (navigator.onLine) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'There was a problem submitting your form due to a slow internet connection.',
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'No internet connection. Please check your network and try again.',
+          });
+        }
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
   </script>
+
 
 
   </main>
