@@ -75,3 +75,12 @@
 .card:hover .card-text {
     transform: translateY(5px);
 }
+
+.icon {
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.info-item:hover .icon {
+    color: #007bff;
+}
