@@ -687,95 +687,109 @@
     <div class="row gy-4">
 
       <div class="col-lg-6">
-
         <div class="row gy-4">
           <div class="col-md-6">
-              <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="200">
-                  <i class="bi bi-geo-alt-fill icon"></i>
-                  <h3>Address</h3>
-                  <p>Iloilo, Iloilo City</p>
-                  <p>Philippines, 5000</p>
-              </div>
+            <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="200">
+              <i class="bi bi-geo-alt-fill icon"></i>
+              <h3>Address</h3>
+              <p>Iloilo, Iloilo City</p>
+              <p>Philippines, 5000</p>
+            </div>
           </div><!-- End Info Item -->
-      
-          <div class="col-md-6">
-              <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="300">
-                  <i class="bi bi-telephone-fill icon"></i>
-                  <h3>Call Us</h3>
-                  <p class="mt-3"><strong>Phone:</strong> <span>+6391 0061 6716</span></p>
-              </div>
-          </div><!-- End Info Item -->
-      
-          <div class="col-md-6">
-              <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="400">
-                  <i class="bi bi-envelope-fill icon"></i>
-                  <h3>Email Us</h3>
-                  <p><strong>Email:</strong> <span>josiahdanielle09gallenero@gmail.com</span></p>
-              </div>
-          </div><!-- End Info Item -->
-      
-          <div class="col-md-6">
-              <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="500">
-                  <i class="bi bi-clock-fill icon"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday</p>
-                  <p>9:00AM - 05:00PM</p>
-              </div>
-          </div><!-- End Info Item -->
-      </div>
-      
 
+          <div class="col-md-6">
+            <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="300">
+              <i class="bi bi-telephone-fill icon"></i>
+              <h3>Call Us</h3>
+              <p class="mt-3"><strong>Phone:</strong> <span>+6391 0061 6716</span></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="400">
+              <i class="bi bi-envelope-fill icon"></i>
+              <h3>Email Us</h3>
+              <p><strong>Email:</strong> <span>josiahdanielle09gallenero@gmail.com</span></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="500">
+              <i class="bi bi-clock-fill icon"></i>
+              <h3>Open Hours</h3>
+              <p>Monday - Friday</p>
+              <p>9:00AM - 05:00PM</p>
+            </div>
+          </div><!-- End Info Item -->
+        </div>
       </div>
-        <div class="col-lg-6">
-        <form id="my-form" action="https://formspree.io/f/xovqvdoj" method="POST" class="mt-4" id="contactForm" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-6">
+        <form id="my-form" action="https://formspree.io/f/xovqvdoj" method="POST" class="mt-4 needs-validation"
+          novalidate data-aos="fade-up" data-aos-delay="200">
           <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                  </div>
+            <div class="col-md-6 mb-3">
+              <div class="form-floating">
                 <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                <label for="name">Your Name</label>
+                <div class="invalid-feedback">
+                  Please provide your name.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="mb-3">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                </div>
+            <div class="col-md-6 mb-3">
+              <div class="form-floating">
                 <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="mb-3">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="bi bi-book-fill"></i></span>
+                <label for="email">Your Email</label>
+                <div class="invalid-feedback">
+                  Please provide a valid email address.
                 </div>
-                <input type="text" class="form-control" name="subject" placeholder="Your Subject" required>
+              </div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                <label for="subject">Your Subject</label>
+                <div class="invalid-feedback">
+                  Please provide a subject.
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="mb-3">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="bi bi-chat-text-fill"></i></span>
+          <div class="mb-3">
+            <div class="form-floating">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              <label for="message">Your Message</label>
+              <div class="invalid-feedback">
+                Please enter your message.
+              </div>
             </div>
-            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
           </div>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary btn-lg" name="submit"><i class="bi bi-send-fill"></i> Send Message</button>
-        </div>
-      </form>
-  </div>
-
-
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg" name="submit"><i class="bi bi-send-fill"></i> Send
+              Message</button>
+          </div>
+        </form>
       </div>
+
+      <script>
+        (function () {
+          'use strict'
+          var forms = document.querySelectorAll('.needs-validation')
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()
+      </script>
+
+    </div>
 
   </div>
 
@@ -832,8 +846,6 @@
 
     form.addEventListener("submit", handleSubmit);
   </script>
-
-
 
   </main>
 
