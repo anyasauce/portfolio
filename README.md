@@ -16,7 +16,7 @@ Database: MySQL
 # 📬 Contact
 I’m always open to collaboration and opportunities. Reach out to me at:
 
-Email: josiahdanielle09gallenero@gmail.com
-LinkedIn: https://www.linkedin.com/in/josiah-danielle-gallenero-750966290/
-GitHub 1: https://github.com/anyasauce
-GitHub 2: https://github.com/josiahgallenero
+## Email: josiahdanielle09gallenero@gmail.com
+## LinkedIn: https://www.linkedin.com/in/josiah-danielle-gallenero-750966290/
+## GitHub 1: https://github.com/anyasauce
+## GitHub 2: https://github.com/josiahgallenero
