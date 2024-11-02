@@ -66,8 +66,8 @@
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h1 data-aos="fade-up">Aspiring Entry Level Full Stack Web Developer</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Passionate about creating dynamic and responsive web applications
-              using modern technologies.</p>
+            <p data-aos="fade-up" data-aos-delay="100">Passionate about creating both static and dynamic web applications using
+              modern technologies.</p>
             <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
               <a href="#projects" class="btn-get-started">View My Projects <i class="bi bi-arrow-right"></i></a>
             </div>
@@ -92,10 +92,9 @@
             <h2>About</h2>
           </div><!-- End Section Title -->
             <h2>About Me</h2>
-          <p>Hi, I'm Josiah Danielle Gallenero, a entry-level full stack web developer with a passion for creating dynamic and
-            responsive websites. My skills range from frontend design to backend development, and I'm always eager to
-            learn new technologies.</p>
-          <p>I am currently a 2nd year college student at PHINMA University of Iloilo, pursuing my degree in Information
+          <p>Hi, I'm Josiah Danielle Gallenero, an entry-level full stack web developer with a passion for creating both static
+            and dynamic websites. My skills range from frontend design to backend development, and I'm always eager to learn new
+            technologies.</p>          <p>I am currently a 2nd year college student at PHINMA University of Iloilo, pursuing my degree in Information
             Technology. In my free time, I work on personal projects and freelance gigs to expand my portfolio and
             experience.</p>
         </div>
@@ -104,58 +103,75 @@
   </section><!-- /About Section -->
 
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section" data-aos="fade-up" data-aos-delay="200">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div>
+  <!-- Stats Section -->
+  <section id="stats" class="stats section" data-aos="fade-up" data-aos-delay="200">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+            <div>
+              <span class="purecounter" data-end="232">0</span>
+              <p>Happy Clients</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
-              </div>
+          </div>
+        </div><!-- End Stats Item -->
+  
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>
+            <div>
+              <span class="purecounter" data-end="521">0</span>
+              <p>Projects</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div>
+          </div>
+        </div><!-- End Stats Item -->
+  
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i>
+            <div>
+              <span class="purecounter" data-end="1463">0</span>
+              <p>Hours Of Support</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
-              </div>
+          </div>
+        </div><!-- End Stats Item -->
+  
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>
+            <div>
+              <span class="purecounter" data-end="15">0</span>
+              <p>Hard Workers</p>
             </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
+          </div>
+        </div><!-- End Stats Item -->
       </div>
+    </div>
+  </section><!-- /Stats Section -->
+  
+  <script>
+    const counters = document.querySelectorAll('.purecounter');
 
-    </section><!-- /Stats Section -->
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-end');
+        const count = +counter.innerText;
+
+        const increment = target / 200;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  </script>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -726,28 +742,31 @@
           <div class="col-md-6">
             <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="200">
               <i class="bi bi-geo-alt-fill icon"></i>
-              <h3>Address</h3>
-              <p>Iloilo, Iloilo City</p>
+              <h3>Country</h3>
               <p>Philippines, 5000</p>
             </div>
           </div><!-- End Info Item -->
 
           <div class="col-md-6">
             <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="300">
-              <i class="bi bi-telephone-fill icon"></i>
-              <h3>Call Us</h3>
-              <p class="mt-3"><strong>Phone:</strong> <span>+6391 0061 6716</span></p>
+              <i class="bi bi-chat-dots-fill icon"></i>
+              <h3>Contact Us</h3>
+              <p class="mt-3">
+                <strong>WhatsApp:</strong> <a href="https://wa.me/639100616716" target="_blank">+6391 0061 6716</a><br>
+                <strong>Telegram:</strong> <a href="https://t.me/anyaqt1" target="_blank">anyaqt1</a>
+              </p>
             </div>
-          </div><!-- End Info Item -->
+          </div><!-- End Contact Info Item -->
+
 
           <div class="col-md-6">
             <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="400">
               <i class="bi bi-envelope-fill icon"></i>
               <h3>Email Us</h3>
-              <p><strong>Email:</strong> <span>josiahdanielle09gallenero@gmail.com</span></p>
+              <p><strong>Email:</strong> <span><a href="mailto:anyajb014@gmail.com">anyajb014@gmail.com</a></span></p>
             </div>
-          </div><!-- End Info Item -->
-
+          </div><!-- End Email Info Item -->
+          
           <div class="col-md-6">
             <div class="info-item aos-init aos-animate" data-aos="fade" data-aos-delay="500">
               <i class="bi bi-clock-fill icon"></i>
@@ -755,7 +774,8 @@
               <p>Monday - Friday</p>
               <p>9:00AM - 05:00PM</p>
             </div>
-          </div><!-- End Info Item -->
+          </div><!-- End Open Hours Info Item -->
+          
         </div>
       </div>
 
@@ -892,10 +912,9 @@
             <span class="sitename">Josiah Danielle Gallenero</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>Iloilo, Iloilo City</p>
             <p>Philippines, 5000</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+6391 0061 6716</span></p>
-            <p><strong>Email:</strong> <span>josiahdanielle09gallenero@gmail.com</span></p>
+            <p class="mt-3"><strong>WhatsApp:</strong> <span>+6391 0061 6716</span></p>
+            <p><strong>Telegram:</strong> <span>@anyaqt1</span></p>
           </div>
         </div>
 
@@ -930,7 +949,10 @@
             <a href="https://github.com/anyasauce" target="_blank"><i class="bi bi-github">2</i></a>
             <a href="https://www.facebook.com/josiahhhh8" target="_blank"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/_josiahhhhh1/" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/josiah-danielle-gallenero-750966290/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/josiah-danielle-gallenero-750966290/" target="_blank"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://t.me/anyaqt1" target="_blank"><i class="bi bi-telegram"></i></a>
+            <a href="https://wa.me/yourWhatsAppNumber" target="_blank"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
@@ -938,7 +960,11 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Josiah Danielle Gallenero</strong> <span>All Rights Reserved</span></p>
+      <p>© <span id="currentYear"></span> <strong>Josiah Danielle Gallenero</strong> | All Rights Reserved</p>
+
+      <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+      </script>
   </footer>
 
   <!-- Scroll Top -->
@@ -953,9 +979,18 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/script.js"></script>
+  <button id="toggleAccessButton" onclick="toggleAccess()">Toggle Access</button>
+  <style>
+    #toggleAccessButton {
+      opacity: 0;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+    }
+  </style>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
