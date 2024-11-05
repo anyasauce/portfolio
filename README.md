@@ -1,4 +1,4 @@
-# **🎉 Welcome to My Web Development Portfolio!**
+# **🎉 Welcome to My Portfolio!**
 
 This repository highlights my journey as a web developer, showcasing a curated selection of my best projects and the skills I've gained along the way.
 
