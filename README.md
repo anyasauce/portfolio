@@ -1,4 +1,4 @@
-# **🎉 Welcome to My Web Development Portfolio!**
+# **🎉 Welcome to My Portfolio!**
 
 This repository highlights my journey as a web developer, showcasing a curated selection of my best projects and the skills I've gained along the way.
 
@@ -18,13 +18,6 @@ This repository highlights my journey as a web developer, showcasing a curated s
 ### **Frontend**
 - **Languages**: HTML, CSS, JavaScript
 - **Frameworks**: Bootstrap for responsive and attractive design
-
-### **Backend**
-- **Language**: PHP
-
-### **Database**
-- **MySQL**: For robust data management and storage
-
 ---
 
 ## 📬 **Contact Me**
